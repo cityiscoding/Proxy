@@ -4,10 +4,8 @@ After=network.target
 
 [Service]
 User=root
-WorkingDirectory=/home/tra
-nthanhpho_dev/ddos-vps
-ExecStart=/bin/bash -c 'source /home/tra
-nthanhpho_dev/ddos-vps/venv/bin/activate && python3 /root/ddos-vps/main.py'
+WorkingDirectory=/home/tranthanhpho_dev/ddos-vps
+ExecStart=/home/tranthanhpho_dev/ddos-vps/venv/bin/python3 /home/tranthanhpho_dev/ddos-vps/main.py
 Restart=always
 
 [Install]
