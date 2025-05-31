@@ -1,0 +1,8 @@
+[Unit]
+Description=Run getproxy.py script
+Wants=getproxy.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/tranthanhp
+ho_dev/ddos-vps/modules/getproxy.py
