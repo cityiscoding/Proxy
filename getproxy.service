@@ -1,8 +1,12 @@
 [Unit]
 Description=Run getproxy.py script
-Wants=getproxy.timer
+After=network.target
 
 [Service]
-Type=oneshot
-ExecStart=/usr/bin/python3 /home/tranthanhp
-ho_dev/ddos-vps/modules/getproxy.py
+Type=simple
+ExecStart=/usr/bin/python3 /home/tranthanhpho_dev/ddos-vps/modules/getproxy.py
+WorkingDirectory=/home/tranthanhpho_dev/ddos-vps/modules
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
