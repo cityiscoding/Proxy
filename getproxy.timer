@@ -4,6 +4,7 @@ Description=Run getproxy.py every 1 minute
 [Timer]
 OnBootSec=1min
 OnUnitActiveSec=1min
+Unit=getproxy.service
 Persistent=true
 
 [Install]
